@@ -23,11 +23,7 @@ jobs:
 
       - name: Run style-dictionary
         run: npx style-dictionary build --config sd.config.cjs
-
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
+        
+      - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          author_name: Joren Broekema
-          author_email: joren.broekema@gmail.com
-          message: 'chore: style-dictionary output'
-          add: '.'
+          commit_message: Update Tokens
